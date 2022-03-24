@@ -3,9 +3,12 @@ const connectDB = require('./config/db');
 const bookRouter = require('./routes/api/books');
 const app = express();
 const bodyParser = require('body-parser');
+var cors = require('cors');
 
 // Connect Database
 connectDB();
+
+app.use(cors({ origin: true, credentials: true }));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
