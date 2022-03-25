@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "app": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd book_app_client && npm run build",
+    "install-client": "cd book_app_client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "author": "",
   "license": "ISC",
