@@ -8,6 +8,7 @@ var cors = require('cors');
 // Connect Database
 connectDB();
 
+// Adding CORS
 app.use(cors({ origin: true, credentials: true }));
 
 // parse application/x-www-form-urlencoded
