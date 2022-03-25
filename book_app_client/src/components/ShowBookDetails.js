@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
+import { withRouter } from './withRouter';
 
 class showBookDetails extends Component {
   constructor(props) {
@@ -132,4 +133,4 @@ class showBookDetails extends Component {
   }
 }
 
-export default showBookDetails;
+export default withRouter(showBookDetails);
